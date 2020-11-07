@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-blue: #173F5F;
+  --light-blue: #20639B;
+  --green: #3CAEA3;
+  --yellow: #F6D55C;
+  --orange: #ED553B;
+}
+
+body {
+  padding: 1rem;
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+}
+.room_div {
+  width: 300px;
+  box-shadow: 2px 5px 10px 2px grey;
+  padding: 15px;
+  margin: 5px;
+  background-color: lightcoral;
+  cursor: pointer;
+}
+
+#room-header {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.game-screen {
+  width: 100%;
+  display: flex;
+  margin-top: 10vh;
+}
+
+#user-board {
+  width: 50%;
+}
+
+#other-boards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+}
+
+.user {
+  margin: auto;
+  margin-top: 10%;
+}
+
+table, th, td {
+  text-align: center;
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+.user th, td {
+  width: 6rem;
+  height: 6rem;
+  font-size: 24px;
+  transition: background-color 0.5s;
+}
+
+th {
+  background-color: black;
+  color: white;
+}
+
+#N3 {
+  background-color: lightcoral;
+}
+.tdhover:hover {
+  cursor: pointer;
+  background-color: var(--light-blue);
+}
+
+.user td:hover {
+  cursor: pointer;
+  background-color: lightblue;
+}
+
+#other-boards td {
+  width: 3rem;
+  height: 1rem;
+  font-size: 12px;
+  padding: 10px;
+}
+#other-boards table {
+  margin: 10px 10px;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+}
+
+/* PEOPLE */
+
+.people {
+  align-self: flex-start;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin: 5px;
+  width: 50%;
+}
+
+.person {
+  /* text-align: center; */
+  padding: 15px;
+  border: 1px solid black;
+  margin: 0px 5px;
+  font-size: 24px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* LOGIN SCREEN */
+.join {
+  width: 30%;
+  height: 40%;
+  position: relative;
+  background-color: var(--dark-blue);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  border-radius: 5px;
+}
+
+.join h1 {
+  text-align: center;
+}
+
+.inputs, .btn {
+  width: 100%;
+  padding: 15px;
+}
+
+.inputs input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color:var(--green);
+  color: white;
+  font-size: 18px;
+}
+
+/* .button {
+  width: 100%;
+  background-color: cornflowerblue;
+  color: black;
+} */
+.w-100 {
+  width: 100%;
+}
+#mL {
+  margin-left: 50px;
+}
+
+.btn41-43 {
+  margin: 0px 0px 8px 0px;
+  padding: 10px 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-41 {
+  border: 2px solid rgb(255, 255, 255);
+  z-index: 1;
+  color: white;
+}
+
+.btn-41:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  background: var(--orange);
+  transition: all 0.3s ease;
+}
+
+.btn-41:hover {
+  color: rgb(0, 0, 0);
+}
+
+.btn-41:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+.btn-41:active {
+  top: 2px;
+}
+
+
+
+
+/* Home screen */
+#home-screen {
+  border-radius: 5px;
+  color: white;
+  position: relative;
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-blue);
+}
+
+.lobby-header {
+  display: flex;
+  padding: 10px;
+}
+
+
+.game-header {
+  display: flex;
+  font-size:24px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  background-color: var(--dark-blue);
+  align-items: center;
+}
+
+.game-item {
+  background-color: var(--dark-blue);
+  padding: 20px;
+  margin: 0 20px;
+}
+
+.game-item span {
+  color: var(--orange);
+}
+
+.chosen {
+  font-size: 32px;
+  margin-left: 30%;
+}
+
+.winner {
+  font-size: 64px;
+  color: white;
+}
+
+
+.rules {
+  font-size: 16px;
+  margin: 20px;
+  padding: 10px;
+}
+
+
+.select {
+  width: 400px;
+  position: absolute;
+  color: black;
+  padding:1em;
+}
+
+
+.game-btn {
+  margin-left: 2em;
+}
+
+.end-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
